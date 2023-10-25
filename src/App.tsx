@@ -1,11 +1,32 @@
-import CsvReader from './components/CsvReader';
-import Header from './components/layouts/Header';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import CsvProvider from './context/context';
+import Home from './components/Home';
+import RootPage from './pages/RootPage';
+import CvsReader from './pages/CvsReader';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <RootPage />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/file',
+          element: <CvsReader />,
+        },
+      ],
+    },
+  ]);
+
   return (
     <>
-      <Header />
-      <CsvReader />
+      <CsvProvider>
+        <RouterProvider router={router} />
+      </CsvProvider>
     </>
   );
 }

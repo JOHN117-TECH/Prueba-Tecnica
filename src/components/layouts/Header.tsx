@@ -1,16 +1,18 @@
 const Header = () => {
   return (
-    <nav className="navbar bg-dark navbar-expand-lg border-bottom border-body" data-bs-theme="dark">
+    <nav
+      className="navbar bg-dark navbar-expand-lg border-bottom border-body"
+      data-bs-theme="dark"
+    >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
-            src="/docs/5.3/assets/brand/bootstrap-logo.svg"
+            src="../../assets/Vector.png"
             alt="Logo"
-            width="30"
-            height="24"
-            className="d-inline-block align-text-top"
+            width={30}
+            height={24}
+            className="align-text-top"
           />
-          Bootstrap
         </a>
         <button
           className="navbar-toggler"
@@ -42,7 +44,7 @@ const Header = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Es
+              <img src="../../assets/Bandera.jpeg" alt="Bandera" /> Es
             </a>
             <ul className="dropdown-menu">
               <li>
